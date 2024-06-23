@@ -36,5 +36,7 @@ mongoose.connect(process.env.MONGODB).then(()=>{
 
 app.use(users);
 app.use(authUsers);
-
+app.get("*",function(req,res){
+    res.status(404).send("Page not found");
+});
 
