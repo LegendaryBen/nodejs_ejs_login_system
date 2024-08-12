@@ -40,3 +40,6 @@ app.get("*",function(req,res){
     res.status(404).send("Page not found");
 });
 
+app.listen(PORT,()=>{
+    console.log("server is running on"+" "+PORT);
+})
